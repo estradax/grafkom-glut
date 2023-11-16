@@ -1,0 +1,12 @@
+macro(MakeExample app_name source_files_app)
+  add_executable(${app_name} ${source_files_app} ${CMAKE_SOURCE_DIR}/include/common.c)
+  target_include_directories(${app_name} PUBLIC ${CMAKE_SOURCE_DIR}/${FREEGLUT_THIRD_PARTY_DIR}/include)
+  target_link_libraries(${app_name} freeglut GLU)
+endmacro()
+
+MakeExample(translate translate.c)
+MakeExample(translate_animated translate_animated.c)
+MakeExample(scale scale.c)
+MakeExample(scale_animated scale_animated.c)
+MakeExample(reflection reflection.c)
+MakeExample(rotation rotation.c)

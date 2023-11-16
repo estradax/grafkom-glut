@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-I/home/hansel/sub/sch/opengl-freeglut/third_party/freeglut-3.4.0/include, -I/home/hansel/sub/sch/opengl-freeglut/include]

@@ -1,0 +1,10 @@
+macro(MakeExample app_name source_files_app)
+  add_executable(${app_name} ${source_files_app})
+  target_include_directories(${app_name} PUBLIC ${CMAKE_SOURCE_DIR}/${FREEGLUT_THIRD_PARTY_DIR}/include)
+  target_link_libraries(${app_name} freeglut GLU)
+endmacro()
+
+MakeExample(triangle triangle.c)
+MakeExample(tetrahedron tetrahedron.c)
+MakeExample(torus torus.c)
+MakeExample(primitive primitive.c)
